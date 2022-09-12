@@ -9,6 +9,10 @@ class EmployeModel(models.Model):
     age=models.IntegerField()
     gender=models.CharField(max_length=20)
     phno=models.CharField(max_length=34)
-    
+    address=models.TextField()
+    work_experience = models.JSONField()
+    Qualification = models.JSONField()
+    Project = models.JSONField()
+
     def __str__(self) -> str:
         return self.name
